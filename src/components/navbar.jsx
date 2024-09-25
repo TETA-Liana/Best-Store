@@ -16,7 +16,7 @@ const Nav=()=>{
            
         </ul>
         <div className=' flex space-x-4 absolute right-0'>
-        <button className="bg-white text-blue-800 p-2  pl-4 pr-4 font-semibold rounded-2xl">login</button>
+     <a href="./loginas"><button className="bg-white text-blue-800 p-2  pl-4 pr-4 font-semibold rounded-2xl">login</button></a> 
         <button className="bg-white text-blue-800 p-2  pl-4 pr-4 font-semibold rounded-2xl">signup</button>
         <i class="fa-solid fa-user p-4 bg-white rounded-full text-gray-500"></i>
         </div>
