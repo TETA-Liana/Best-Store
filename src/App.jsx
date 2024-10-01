@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/login';
+import Signup from './components/signup';
+import Loginas from './components/loginas'
 import Nav from './components/navbar';
 import Home from './components/home';
 import About from './components/aboutus';
@@ -10,16 +13,17 @@ import Contacts from './components/contacts';
 
 const App = () => {
   return (
-    
     <div>
+   
       <Nav />
-      <Home />
+      <Home/>
       <About/>
       <Products/>
       <Book/>
       <Contacts/>
-      
-    </div>
+    
+      </div>
+     
   );
 };
 
