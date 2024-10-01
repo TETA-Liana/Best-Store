@@ -2,9 +2,10 @@ const Contacts=()=>{
     return( 
         <>
         <section id='contacts'>
+        <h3 className='text-blue-800 p-4 font-bold text-center text-xl'>Contacts</h3> 
         <div className="bg-white flex">
 
-         <h3 className='text-blue-800 p-4 font-bold text-center text-xl'>Contacts</h3>
+        
 <div className="flex flex-col p-6">
 <i class="fa-solid fa-envelope p-6 "></i>
 <i class="fa-brands fa-facebook p-6"></i>
