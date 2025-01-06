@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-blue-200 flex items-center justify-center min-h-screen">
+    <div className="bg-yellow-600 flex items-center justify-center min-h-screen">
       <div className="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section: Heading and Form */}
         <div className="space-y-6">
@@ -32,7 +32,7 @@ const ContactForm = () => {
           </p>
           <form
             onSubmit={handleSubmit}
-            className="bg-blue-500 p-8 rounded-lg space-y-6"
+            className="bg-white p-8 rounded-lg space-y-6"
           >
             <div className="mb-6">
               <label className="block text-black text-sm mb-2" htmlFor="name">
@@ -77,7 +77,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="w-full py-2 bg-blue-700 text-white hover:bg-gray-600 rounded-md"
+              className="w-full py-2 bg-yellow-600 text-black hover:bg-gray-600 rounded-md"
             >
               Send
             </button>
@@ -85,7 +85,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right Section: Info */}
-        <div className="text-gray-500 space-y-8">
+        <div className="text-black space-y-8">
           <div>
             <h2 className="text-xl uppercase text-black">Opening Hours</h2>
             <p>Monday – Friday</p>
@@ -108,10 +108,10 @@ const ContactForm = () => {
 
           {/* Social Media Links */}
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-white">dribbble</a>
-            <a href="#" className="hover:text-white">instagram</a>
-            <a href="#" className="hover:text-white">linkedin</a>
-            <a href="#" className="hover:text-white">twitter</a>
+            <a href="#" className="hover:text-black">dribbble</a>
+            <a href="#" className="hover:text-black">instagram</a>
+            <a href="#" className="hover:text-black">linkedin</a>
+            <a href="#" className="hover:text-black">twitter</a>
           </div>
         </div>
       </div>

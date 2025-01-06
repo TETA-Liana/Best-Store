@@ -1,7 +1,8 @@
 const About=()=>{
     return(
-        <section id="about">
-            <div className="bg-blue-200">
+        <div className="bg-yellow-600">
+        <section id="about"className="mb-8">
+            <div className="bg-yellow-600">
                 <div className="p-6">
                     <p className="p-12">Meet the most beautiful items</p>
                     <p className="font-bold text-3xl pl-12">Best store is here for you to connect you<br></br>
@@ -16,20 +17,22 @@ away to such for your goods or clients.</p>
             />
 
             </div>
-        <div className="bg-blue-200">
-            <h3 className='text-blue-500 p-4 font-bold text-center text-xl'>About us</h3>
-         <div className="space-x-4 p-4 flex text-white justify-between">
-            <div className="bg-blue-500 p-6 border border-blue-400 rounded-lg w-64 h-64">
-            <i class="fa-solid fa-cart-shopping bg-white rounded-full text-blue-500 p-4"></i>
+        <div className="bg-yellow-600">
+            <h3 className='text-black p-4 font-bold text-center text-3xl'>About us</h3>
+         <div className="space-x-4 pl-12 flex text-black justify-between">
+            <div className=" p-6 border border-black rounded-lg w-64 h-64">
+            <i class="fa-solid fa-cart-shopping bg-white rounded-full text-black p-4"></i>
             <p className="pt-6">Buy one get<br></br>one free is a<br></br>promotion for goods</p>
             </div>
-           <div className="bg-blue-500 p-6 border border-blue-400 rounded-lg w-64 h-64">
-            <i class="fa-solid fa-bag-shopping bg-white rounded-full text-blue-500 p-4"></i>
+           <div className=" p-6 border border-black rounded-lg w-64 h-64">
+            <i class="fa-solid fa-bag-shopping bg-white rounded-full text-black p-4"></i>
          <p className="pt-6">Attract more<br></br>investors by<br></br>using BestStore</p>
           </div>
-           <div className="bg-blue-500 p-6 border border-blue-400 rounded-lg w-64 h-64">
-            <i class="fa-solid fa-layer-group bg-white rounded-full text-blue-500 p-4"></i>
-           <p className="pt-6">Buy one get<br></br>one free is a<br></br>promotion for goods</p>
+          <div className="pr-12">
+           <div className=" p-6 border border-black rounded-lg w-64 h-64">
+            <i class="fa-solid fa-layer-group bg-white rounded-full text-black p-4"></i>
+           <p className="pt-6 pb-6">Buy one get<br></br>one free is a<br></br>promotion for goods</p>
+        </div>
         </div>
 
 
@@ -38,6 +41,7 @@ away to such for your goods or clients.</p>
 
         </div>
         </section>
+        </div>
     )
 }
 export default About;

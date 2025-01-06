@@ -6,8 +6,11 @@ const SignupForm = () => {
     secondName: "",
     email: "",
     password: "",
-    confirmPassword: "",
+  
   });
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -16,9 +19,41 @@ const SignupForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data:", formData);
+
+   
+   
+   
+    const dataToSubmit = {
+      firstName: formData.firstName,
+      secondName: formData.secondName,
+      email: formData.email,
+      password: formData.password,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSubmit),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+      
+        setErrorMessage(result.message || "Something went wrong!");
+      } else {
+        
+        setSuccessMessage("Registration successful!");
+        setErrorMessage(""); 
+      }
+    } catch (error) {
+      setErrorMessage("Failed to register. Please try again.");
+    }
   };
 
   return (
@@ -33,12 +68,20 @@ const SignupForm = () => {
       </div>
 
       {/* Right Section: Form */}
-      <div className="w-1/2 bg-blue-600 flex items-center justify-center">
+      <div className="w-1/2 bg-yellow-600 flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="bg-blue-500 p-8 rounded-lg w-4/5 max-w-lg text-white"
+          className="bg-yellow-500 p-8 rounded-lg w-4/5 max-w-lg text-white"
         >
           <h1 className="text-3xl font-bold mb-8 text-center">sign up</h1>
+
+          {errorMessage && (
+            <div className="mb-4 text-red-500 text-center">{errorMessage}</div>
+          )}
+
+          {successMessage && (
+            <div className="mb-4 text-green-500 text-center">{successMessage}</div>
+          )}
 
           <div className="mb-6">
             <label className="block text-white text-sm mb-2" htmlFor="firstName">
@@ -96,23 +139,11 @@ const SignupForm = () => {
             />
           </div>
 
-          <div className="mb-6">
-            <label className="block text-white text-sm mb-2" htmlFor="confirmPassword">
-              Confirm new password
-            </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full p-2 bg-transparent border-b-2 border-white outline-none text-white"
-            />
-          </div>
+
 
           <button
             type="submit"
-            className="w-full py-2 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-200"
+            className="w-full py-2 bg-white text-yellow-600 rounded-full font-semibold hover:bg-gray-200"
           >
             signup
           </button>
